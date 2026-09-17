@@ -1,0 +1,156 @@
+[
+  {
+    "testname": "Empty username and empty password",
+    "username": "",
+    "password": "",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username is required"
+  },
+  {
+    "testname": "Empty username and valid password",
+    "username": "",
+    "password": "secret_sauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username is required"
+  },
+  {
+    "testname": "Valid username and empty password",
+    "username": "standard_user",
+    "password": "",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Password is required"
+  },
+  {
+    "testname": "Invalid username and valid password",
+    "username": "invalid_user",
+    "password": "secret_sauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Valid username and invalid password",
+    "username": "standard_user",
+    "password": "abcd",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Invalid username and invalid password",
+    "username": "invalid_user",
+    "password": "abcd",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Locked user with valid password",
+    "username": "locked_out_user",
+    "password": "secret_sauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Sorry, this user has been locked out."
+  },
+  {
+    "testname": "Username with leading spaces",
+    "username": " standard_user",
+    "password": "secret_sauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Username with trailing spaces",
+    "username": "standard_user ",
+    "password": "secret_sauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Username with leading and trailing spaces",
+    "username": " standard_user ",
+    "password": "secret_sauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Password with leading spaces",
+    "username": "standard_user",
+    "password": " secret_sauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Password with trailing spaces",
+    "username": "standard_user",
+    "password": "secret_sauce ",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Password with uppercase characters",
+    "username": "standard_user",
+    "password": "SECRET_SAUCE",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Username with uppercase characters",
+    "username": "STANDARD_USER",
+    "password": "secret_sauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Username with special characters",
+    "username": "@#$%^",
+    "password": "secret_sauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Password with special characters",
+    "username": "standard_user",
+    "password": "@#$%^",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Numeric username",
+    "username": "123456",
+    "password": "secret_sauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Numeric password",
+    "username": "standard_user",
+    "password": "123456",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Username containing underscore variation",
+    "username": "standarduser",
+    "password": "secret_sauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Password missing underscore",
+    "username": "standard_user",
+    "password": "secretsauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Very short username",
+    "username": "a",
+    "password": "secret_sauce",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testname": "Very short password",
+    "username": "standard_user",
+    "password": "a",
+    "expectedResult": "failure",
+    "errorMsg": "Epic sadface: Username and password do not match any user in this service"
+  }
+]
