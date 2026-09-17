@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "moduleResolution": "bundler",
+    "allowJs": true,
+    "checkJs": false,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "lib": [
+      "ES2022"
+    ],
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@playwright/test": [
+        "./tests/support/playwright-test-bridge.js"
+      ]
+    }
+  },
+  "include": [
+    "tests/**/*.js",
+    "tests/support/**/*.js"
+  ],
+  "exclude": [
+    "playwright.config.js",
+    "playwright.config.mjs",
+    "playwright.config.cjs",
+    "node_modules"
+  ]
+}
